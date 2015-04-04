@@ -1,0 +1,23 @@
+{
+    "admins": [
+        "richteer@xmpp.lastprime.net"
+    ],
+    "jid": "thisisatest@xmpp.cslabs.clarkson.edu/resource",
+    "modules": [
+        "Config",
+        "Help",
+        "Admin",
+        "Cat",
+        "Ddg",
+        "Eval",
+        "Toys",
+        "Xkcd",
+        "Greeting"
+    ],
+    "muc": [
+        {
+            "nick": "Haltest",
+            "room": "herpderp@conference.xmpp.cslabs.clarkson.edu"
+        }
+    ]
+}
