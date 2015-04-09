@@ -20,9 +20,8 @@ def sylcnt(word):
 	elif word[-2:] == 'es':
 		word = word[1:-2]
 
-	for i in range(len(word)):
-		c = word[i]
-		vowel = (c == 'a' or c == 'e' or c == 'i' or c == 'o' or c == 'u' or c == 'y')
+	for letter in word:
+		vowel = (letter in 'aeiouy')
 		if not lastvowel and vowel:
 			syl += 1
 		lastvowel = vowel
@@ -33,11 +32,7 @@ def sylcnt(word):
 
 # filters non-alphanumeric characters and lowercases everything
 def clean(x):
-	y = ''
-	for i in range(len(x)):
-		if x[i].isalpha():
-			y += x[i]
-	return y.lower()
+	return ''.join([letter for letter in x if letter.isalpha()]).lower()
 
 # This function determines is a string can be split into lines deterministic of a given structure
 # Returns false if it cannot be so, the stanza of poem if it can
