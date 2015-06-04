@@ -13,5 +13,5 @@ class Link(XMPPModule):
         if obj:
             addr = obj.group(1)
             webpage = requests.get(addr).content
-            title = self.titleReg.match(str(webpage)).group(1).rstrip().lstrip()
+            title = self.titleReg.match(str(webpage)).group(1).strip()
             self.xmpp.reply(msg, "Website: " + title)
